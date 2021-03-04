@@ -13,6 +13,9 @@
 		FADBB32725F00B2D007A6379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32525F00B2D007A6379 /* Main.storyboard */; };
 		FADBB32925F00B2F007A6379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32825F00B2F007A6379 /* Assets.xcassets */; };
 		FADBB32C25F00B2F007A6379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32A25F00B2F007A6379 /* LaunchScreen.storyboard */; };
+		FADBB34525F0F735007A6379 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB34425F0F735007A6379 /* UIView+Ex.swift */; };
+		FADBB34F25F0FC96007A6379 /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */; };
+		FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FADBB32825F00B2F007A6379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADBB32B25F00B2F007A6379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADBB32D25F00B2F007A6379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADBB34425F0F735007A6379 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
+		FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDescriptionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		FADBB31E25F00B2D007A6379 /* ProfileApp */ = {
 			isa = PBXGroup;
 			children = (
+				FADBB33B25F0CE32007A6379 /* Controllers */,
+				FADBB33A25F0CE24007A6379 /* Extensions */,
+				FADBB33825F0CDF3007A6379 /* Models */,
+				FADBB33C25F0CE54007A6379 /* Resources */,
+				FADBB33925F0CE17007A6379 /* Views */,
 				FADBB31F25F00B2D007A6379 /* AppDelegate.swift */,
 				FADBB32125F00B2D007A6379 /* SceneDelegate.swift */,
-				FADBB32325F00B2D007A6379 /* ViewController.swift */,
 				FADBB32525F00B2D007A6379 /* Main.storyboard */,
-				FADBB32825F00B2F007A6379 /* Assets.xcassets */,
-				FADBB32A25F00B2F007A6379 /* LaunchScreen.storyboard */,
 				FADBB32D25F00B2F007A6379 /* Info.plist */,
 			);
 			path = ProfileApp;
+			sourceTree = "<group>";
+		};
+		FADBB33825F0CDF3007A6379 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FADBB33925F0CE17007A6379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */,
+				FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FADBB33A25F0CE24007A6379 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FADBB34425F0F735007A6379 /* UIView+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FADBB33B25F0CE32007A6379 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FADBB32325F00B2D007A6379 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FADBB33C25F0CE54007A6379 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FADBB32825F00B2F007A6379 /* Assets.xcassets */,
+				FADBB32A25F00B2F007A6379 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +176,7 @@
 			files = (
 				FADBB32C25F00B2F007A6379 /* LaunchScreen.storyboard in Resources */,
 				FADBB32925F00B2F007A6379 /* Assets.xcassets in Resources */,
+				FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */,
 				FADBB32725F00B2D007A6379 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +211,8 @@
 				FADBB32425F00B2D007A6379 /* ViewController.swift in Sources */,
 				FADBB32025F00B2D007A6379 /* AppDelegate.swift in Sources */,
 				FADBB32225F00B2D007A6379 /* SceneDelegate.swift in Sources */,
+				FADBB34525F0F735007A6379 /* UIView+Ex.swift in Sources */,
+				FADBB34F25F0FC96007A6379 /* TitleDescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
