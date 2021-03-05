@@ -69,7 +69,7 @@
                                         <rect key="frame" x="0.0" y="32.5" width="374" height="27.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="positionText" value="Experience"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="positionText" value="Experience:"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="30 years"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -95,7 +95,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="408" id="Cu9-ku-vmf"/>
                                         </constraints>
-                                        <mutableString key="text">Soviet and Russian musician, singer, songwriter, founder and permanent leader of the "Sektor Gaza" group. At the end of Voronezh secondary school 30 he worked at a factory and at the same time studied at DOSAAF as a ZIL-130 driver. He served in the Armed Forces of the USSR in the Far East (in Blagoveshchensk) in the tank troops as a driver. Retired in 1984. After serving in the army, Yuri worked for about three years as an inspector of the State Traffic Inspectorate, and in the last months of the contract he served in private security, then worked as a milling machine operator at the plant. He recorded an acoustic album on a tape recorder in 1981 and partially re-recorded it in 1985. On December 5, a concert was held at the Voronezh Rock Club, at which Yuri performed several songs of his own composition. For six months, he performed solo under the name "Sektor gaza", obtained thanks to the nickname of the part of the Left Bank region of Voronezh, known for the tense environmental situation and the criminal situation. The first electrical composition of the team was formed only in June 1988 and subsequently changed frequently. The group of Yuri Klinskikh received universal fame in 1990 after the release of the albums "Zloveshchii mertvetsy" and "Yadryona Vosh." The success of a simple Voronezh guy was made possible thanks to Gorbachev's perestroika, hungry for forbidden topics. There was no censorship for him; he sang about everything and everything. Due to the abundance of profanity in the lyrics, the Gaza Strip remained in the underground for a long time. Until 1991, the group did not give concerts outside Voronezh (with the exception of the only performance in Cherepovets in 1989). Records of the "Sektor Gaza" were distributed throughout the country by fans.</mutableString>
+                                        <string key="text">Soviet and Russian musician, singer, songwriter, founder and permanent leader of the "Sektor Gaza" group. At the end of Voronezh secondary school 30 he worked at a factory and at the same time studied at DOSAAF as a ZIL-130 driver. He served in the Armed Forces of the USSR in the Far East (in Blagoveshchensk) in the tank troops as a driver. Retired in 1984. After serving in the army, Yuri worked for about three years as an inspector of the State Traffic Inspectorate, and in the last months of the contract he served in private security, then worked as a milling machine operator at the plant. He recorded an acoustic album on a tape recorder in 1981 and partially re-recorded it in 1985. On December 5, a concert was held at the Voronezh Rock Club, at which Yuri performed several songs of his own composition. For six months, he performed solo under the name "Sektor gaza", obtained thanks to the nickname of the part of the Left Bank region of Voronezh, known for the tense environmental situation and the criminal situation. The first electrical composition of the team was formed only in June 1988 and subsequently changed frequently. The group of Yuri Klinskikh received universal fame in 1990 after the release of the albums "Zloveshchii mertvetsy" and "Yadryona Vosh." The success of a simple Voronezh guy was made possible thanks to Gorbachev's perestroika, hungry for forbidden topics. There was no censorship for him; he sang about everything and everything. Due to the abundance of profanity in the lyrics, the Gaza Strip remained in the underground for a long time. Until 1991, the group did not give concerts outside Voronezh (with the exception of the only performance in Cherepovets in 1989). Records of the "Sektor Gaza" were distributed throughout the country by fans.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -158,13 +158,13 @@
                     <navigationItem key="navigationItem" id="bbN-AY-rXu">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="edit" id="r6c-3n-u6E">
-                                <color key="tintColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="bpb-jY-w8w" kind="show" id="Wja-kR-g6K"/>
+                                    <segue destination="d7K-f7-RVP" kind="show" id="ZMv-SZ-4DZ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="3L5-Pe-fnu">
-                                <color key="tintColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -172,6 +172,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="736" y="76"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="s7U-9m-7wl">
+            <objects>
+                <viewController id="d7K-f7-RVP" customClass="EditInfoController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PlQ-LS-hlE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="It3-1m-yig">
+                                <rect key="frame" x="0.0" y="152" width="414" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG7-4o-Zgv">
+                                        <rect key="frame" x="8" y="54" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yury" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gog-qB-vsr">
+                                        <rect key="frame" x="136" y="53" width="147" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zpb-0T-JoD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="bAz-VN-Rbm">
+                        <barButtonItem key="backBarButtonItem" title="prev" id="Mrs-1o-Ijf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Dut-N0-hNF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSA-1v-z05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.5797101449277" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vDc-HO-CDr">
@@ -181,9 +225,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D2c-MO-bBW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
@@ -195,20 +243,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyQ-LT-LNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="76"/>
-        </scene>
-        <!--Edit-->
-        <scene sceneID="MMi-cY-EcD">
-            <objects>
-                <viewController interfaceStyle="light" id="bpb-jY-w8w" customClass="ViewController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Edit" id="TVD-Z9-lqi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wgf-j4-jnq">
-                            <color key="tintColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JOL-t1-1c4" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1407" y="76"/>
         </scene>
     </scenes>
     <resources>

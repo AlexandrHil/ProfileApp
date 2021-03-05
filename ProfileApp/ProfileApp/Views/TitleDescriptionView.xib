@@ -18,17 +18,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="light" id="N0p-du-8jJ">
-            <rect key="frame" x="0.0" y="0.0" width="227" height="39"/>
+            <rect key="frame" x="0.0" y="0.0" width="227" height="38"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZX-K7-kmY">
-                    <rect key="frame" x="124" y="5" width="83" height="29"/>
+                    <rect key="frame" x="124" y="5" width="83" height="28"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-1S-uuW">
-                    <rect key="frame" x="5" y="5" width="69" height="29"/>
+                    <rect key="frame" x="5" y="5" width="69" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="589.13043478260875" y="-88.451086956521749"/>
+            <point key="canvasLocation" x="589.13043478260875" y="-88.043478260869577"/>
         </view>
     </objects>
     <resources>

@@ -19,13 +19,6 @@ class TitleDescriptionView: UIView {
         }
     }
 
-    @IBInspectable
-    var descriptionText: String = "" {
-        didSet {
-            self.descriptionLabel.text = self.descriptionText
-        }
-    }
-
     // MARK: - IBOutlet
 
     @IBOutlet var contentView: UIView!
