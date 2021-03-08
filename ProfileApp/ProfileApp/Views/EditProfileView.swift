@@ -22,7 +22,7 @@ class EditProfileView: UIView {
     @IBInspectable
     var descriptionText: String = "" {
         didSet {
-            self.descriptionLabel.text = self.descriptionText
+            self.descriptionTextField.text = self.descriptionText
         }
     }
 
@@ -30,7 +30,7 @@ class EditProfileView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextField: UITextField!
 
     // MARK: - initialization
 

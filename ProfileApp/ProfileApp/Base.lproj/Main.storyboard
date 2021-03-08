@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-og-je1">
-                                <rect key="frame" x="150" y="98" width="120" height="120"/>
+                                <rect key="frame" x="150" y="10" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="YQs-6r-M9V">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -37,7 +38,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yury &quot;Hoy&quot; Klinskikh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssH-mr-GK8">
-                                <rect key="frame" x="109" y="228" width="201.5" height="26"/>
+                                <rect key="frame" x="109" y="140" width="201.5" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="Y5M-2Q-Y9E"/>
                                 </constraints>
@@ -46,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="57 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdg-Wr-NSj">
-                                <rect key="frame" x="175.5" y="257" width="68.5" height="22"/>
+                                <rect key="frame" x="175.5" y="169" width="68.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="oKP-ac-dca"/>
                                 </constraints>
@@ -55,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-cc-4KW">
-                                <rect key="frame" x="20" y="299" width="374" height="60"/>
+                                <rect key="frame" x="20" y="211" width="374" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-Xk-vFm" customClass="TitleDescriptionView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="32.5"/>
@@ -80,14 +81,14 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGh-2N-nEC">
-                                <rect key="frame" x="20" y="288" width="374" height="1"/>
+                                <rect key="frame" x="20" y="200" width="374" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="P2c-hC-e6u"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF2-7U-ze1">
-                                <rect key="frame" x="20" y="384" width="374" height="402"/>
+                                <rect key="frame" x="20" y="296" width="374" height="402"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="juc-I6-yEm">
                                         <rect key="frame" x="-6" y="0.0" width="386" height="408"/>
@@ -112,14 +113,17 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="WhD-rC-vfd"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-8T-Qll">
-                                <rect key="frame" x="40" y="801" width="334" height="51"/>
+                                <rect key="frame" x="40" y="713" width="334" height="51"/>
                                 <color key="backgroundColor" red="0.10475402859999999" green="0.20387113940000001" blue="0.1171750808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Contacts"/>
+                                <connections>
+                                    <segue destination="NZa-pQ-FOr" kind="show" id="sBL-mj-mnu"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRE-Lu-Fqe">
-                                <rect key="frame" x="20" y="369" width="374" height="1"/>
+                                <rect key="frame" x="20" y="281" width="374" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="2WJ-Yp-CHU"/>
@@ -173,16 +177,200 @@
             </objects>
             <point key="canvasLocation" x="736" y="76"/>
         </scene>
+        <!--Contacts-->
+        <scene sceneID="oVI-4P-5w2">
+            <objects>
+                <viewController id="NZa-pQ-FOr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="90j-fW-QaV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W04-xy-7ny" customClass="ContactDescriptionView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="16" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionLabelText" value="+375297778899"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="phone" catalog="system"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-7J-LX8">
+                                <rect key="frame" x="36" y="86" width="349" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="feF-9F-2dM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSb-bb-duc" customClass="ContactDescriptionView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="87" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionLabelText" value="sektorgaza@gmail.com"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stringDescriptionLabelText" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon">
+                                        <imageReference key="value" image="envelope" catalog="system" renderingMode="original"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkv-Y3-UBm" customClass="ContactDescriptionView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="158" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionLabelText" value="sektor.gaza"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stringDescriptionLabelText" value="Skype"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="skype"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-P8-e9x">
+                                <rect key="frame" x="32" y="227" width="350" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2I4-o1-AA7"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g38-uw-Hw9">
+                                <rect key="frame" x="32" y="158" width="348" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="d1G-Q0-hRz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Fp-DX-2ED"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ahF-7J-LX8" firstAttribute="leading" secondItem="90j-fW-QaV" secondAttribute="leadingMargin" constant="16" id="4eL-Fh-Cak"/>
+                            <constraint firstItem="ahF-7J-LX8" firstAttribute="top" secondItem="90j-fW-QaV" secondAttribute="top" constant="86" id="55G-5c-j7k"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="trailing" secondItem="W04-xy-7ny" secondAttribute="trailing" id="83w-WC-219"/>
+                            <constraint firstItem="kcL-P8-e9x" firstAttribute="top" secondItem="GSb-bb-duc" secondAttribute="bottom" constant="70" id="8Cf-qd-MOY"/>
+                            <constraint firstItem="kcL-P8-e9x" firstAttribute="bottom" secondItem="Mkv-Y3-UBm" secondAttribute="bottom" id="A4e-vB-U6C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g38-uw-Hw9" secondAttribute="trailing" constant="14" id="IfJ-vM-D6C"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="leading" secondItem="4Fp-DX-2ED" secondAttribute="leading" id="MzB-rA-Chu"/>
+                            <constraint firstItem="ahF-7J-LX8" firstAttribute="top" secondItem="W04-xy-7ny" secondAttribute="bottom" id="MzJ-Oe-huU"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="leading" secondItem="Mkv-Y3-UBm" secondAttribute="leading" id="SsQ-G3-yvv"/>
+                            <constraint firstItem="Mkv-Y3-UBm" firstAttribute="top" secondItem="GSb-bb-duc" secondAttribute="bottom" constant="1" id="Ua8-9p-GZB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ahF-7J-LX8" secondAttribute="trailing" constant="9" id="VKU-eo-Skw"/>
+                            <constraint firstItem="g38-uw-Hw9" firstAttribute="top" secondItem="Mkv-Y3-UBm" secondAttribute="top" id="YJj-SQ-ORV"/>
+                            <constraint firstAttribute="bottom" secondItem="GSb-bb-duc" secondAttribute="bottom" constant="651" id="ZcB-14-vK8"/>
+                            <constraint firstItem="g38-uw-Hw9" firstAttribute="leading" secondItem="kcL-P8-e9x" secondAttribute="leading" id="b06-xw-IJm"/>
+                            <constraint firstItem="kcL-P8-e9x" firstAttribute="leading" secondItem="90j-fW-QaV" secondAttribute="leadingMargin" constant="12" id="cxQ-EM-xKT"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="centerX" secondItem="kcL-P8-e9x" secondAttribute="centerX" id="lyx-3M-aQT"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="top" secondItem="ahF-7J-LX8" secondAttribute="bottom" id="sEm-Kg-QWv"/>
+                            <constraint firstItem="W04-xy-7ny" firstAttribute="top" secondItem="4Fp-DX-2ED" secondAttribute="top" constant="16" id="tDW-3i-GJy"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="centerX" secondItem="90j-fW-QaV" secondAttribute="centerX" id="vig-7X-ZEQ"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="leading" secondItem="W04-xy-7ny" secondAttribute="leading" id="xGJ-Gs-M4l"/>
+                            <constraint firstItem="GSb-bb-duc" firstAttribute="trailing" secondItem="Mkv-Y3-UBm" secondAttribute="trailing" id="ylz-2o-HHG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="i35-cv-eUu">
+                        <barButtonItem key="backBarButtonItem" title="    " id="EfK-Yq-U7Y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="RiS-MH-MMO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="mKs-vs-eOy" kind="show" id="N0d-aP-PIR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLS-eW-6te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="758.70535714285711"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="Mhs-B2-AM3">
+            <objects>
+                <viewController id="mKs-vs-eOy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gAF-kk-3xD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bed-RS-UxT">
+                                <rect key="frame" x="16" y="64" width="398" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="LaJ-9b-B0J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-mm-AW3">
+                                <rect key="frame" x="16" y="117" width="398" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="vEs-RM-ATl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-yV-XRn" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="12" width="398" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Phone"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="+375297778899"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-RT-dYS">
+                                <rect key="frame" x="16" y="170" width="398" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="kx5-W7-oAH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-hU-sde" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="65" width="398" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="sektorgaza@gmail.com"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-DK-HIC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="118" width="398" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Skype"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="sektor.gaza"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="216-xJ-Epi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JGg-RT-dYS" firstAttribute="leading" secondItem="g0c-mm-AW3" secondAttribute="leading" id="30L-IZ-3SM"/>
+                            <constraint firstItem="g0c-mm-AW3" firstAttribute="top" secondItem="TtG-hU-sde" secondAttribute="bottom" id="4vm-mH-zLN"/>
+                            <constraint firstItem="TtG-hU-sde" firstAttribute="top" secondItem="Bed-RS-UxT" secondAttribute="bottom" id="7qh-7J-ui5"/>
+                            <constraint firstItem="Bed-RS-UxT" firstAttribute="leading" secondItem="Xth-yV-XRn" secondAttribute="leading" id="9lT-s6-46M"/>
+                            <constraint firstItem="Nq4-DK-HIC" firstAttribute="leading" secondItem="Xth-yV-XRn" secondAttribute="leading" id="I82-KR-59C"/>
+                            <constraint firstItem="JGg-RT-dYS" firstAttribute="top" secondItem="Nq4-DK-HIC" secondAttribute="bottom" id="J0X-gT-TkK"/>
+                            <constraint firstItem="Bed-RS-UxT" firstAttribute="trailing" secondItem="Xth-yV-XRn" secondAttribute="trailing" id="LS0-md-Ywm"/>
+                            <constraint firstItem="Nq4-DK-HIC" firstAttribute="top" secondItem="g0c-mm-AW3" secondAttribute="bottom" id="OJ3-iK-d5s"/>
+                            <constraint firstItem="Xth-yV-XRn" firstAttribute="leading" secondItem="216-xJ-Epi" secondAttribute="leading" constant="16" id="Scl-Dd-xep"/>
+                            <constraint firstItem="Nq4-DK-HIC" firstAttribute="trailing" secondItem="TtG-hU-sde" secondAttribute="trailing" id="SpF-6M-aoF"/>
+                            <constraint firstItem="Xth-yV-XRn" firstAttribute="top" secondItem="gAF-kk-3xD" secondAttribute="top" constant="12" id="bJD-MK-JSK"/>
+                            <constraint firstItem="JGg-RT-dYS" firstAttribute="trailing" secondItem="g0c-mm-AW3" secondAttribute="trailing" id="cCf-me-cPG"/>
+                            <constraint firstItem="Bed-RS-UxT" firstAttribute="top" secondItem="Xth-yV-XRn" secondAttribute="bottom" id="cge-fR-4bu"/>
+                            <constraint firstItem="JGg-RT-dYS" firstAttribute="trailing" secondItem="Nq4-DK-HIC" secondAttribute="trailing" id="h5x-de-2ZI"/>
+                            <constraint firstItem="JGg-RT-dYS" firstAttribute="leading" secondItem="Nq4-DK-HIC" secondAttribute="leading" id="iLQ-94-lKN"/>
+                            <constraint firstItem="Xth-yV-XRn" firstAttribute="trailing" secondItem="216-xJ-Epi" secondAttribute="trailing" id="uK4-N1-bMZ"/>
+                            <constraint firstItem="Nq4-DK-HIC" firstAttribute="leading" secondItem="TtG-hU-sde" secondAttribute="leading" id="yvx-K2-VmS"/>
+                            <constraint firstItem="Nq4-DK-HIC" firstAttribute="trailing" secondItem="Xth-yV-XRn" secondAttribute="trailing" id="zdI-bG-9pZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="0Od-cQ-tJ3">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Hp5-Cw-2QX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="L7U-2C-myB"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1c-ze-RSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="759"/>
+        </scene>
         <!--Edit-->
         <scene sceneID="s7U-9m-7wl">
             <objects>
                 <viewController id="d7K-f7-RVP" customClass="EditInfoController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PlQ-LS-hlE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-jo-Ud8">
-                                <rect key="frame" x="16" y="100" width="398" height="370"/>
+                                <rect key="frame" x="16" y="12" width="398" height="370"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-Mo-2iC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="52"/>
@@ -292,18 +480,18 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-ve-Ey4">
-                                <rect key="frame" x="16" y="470" width="382" height="320"/>
+                                <rect key="frame" x="16" y="382" width="382" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="QnG-ts-et2"/>
                                 </constraints>
-                                <mutableString key="text">Soviet and Russian musician, singer, songwriter, founder and permanent leader of the "Sektor Gaza" group. At the end of Voronezh secondary school 30 he worked at a factory and at the same time studied at DOSAAF as a ZIL-130 driver. He served in the Armed Forces of the USSR in the Far East (in Blagoveshchensk) in the tank troops as a driver. Retired in 1984. After serving in the army, Yuri worked for about three years as an inspector of the State Traffic Inspectorate, and in the last months of the contract he served in private security, then worked as a milling machine operator at the plant. He recorded an acoustic album on a tape recorder in 1981 and partially re-recorded it in 1985. On December 5, a concert was held at the Voronezh Rock Club, at which Yuri performed several songs of his own composition. For six months, he performed solo under the name "Sektor gaza", obtained thanks to the nickname of the part of the Left Bank region of Voronezh, known for the tense environmental situation and the criminal situation. The first electrical composition of the team was formed only in June 1988 and subsequently changed frequently. The group of Yuri Klinskikh received universal fame in 1990 after the release of the albums "Zloveshchii mertvetsy" and "Yadryona Vosh." The success of a simple Voronezh guy was made possible thanks to Gorbachev's perestroika, hungry for forbidden topics. There was no censorship for him; he sang about everything and everything. Due to the abundance of profanity in the lyrics, the Gaza Strip remained in the underground for a long time. Until 1991, the group did not give concerts outside Voronezh (with the exception of the only performance in Cherepovets in 1989). Records of the "Sektor Gaza" were distributed throughout the country by fans.</mutableString>
+                                <string key="text">Soviet and Russian musician, singer, songwriter, founder and permanent leader of the "Sektor Gaza" group. At the end of Voronezh secondary school 30 he worked at a factory and at the same time studied at DOSAAF as a ZIL-130 driver. He served in the Armed Forces of the USSR in the Far East (in Blagoveshchensk) in the tank troops as a driver. Retired in 1984. After serving in the army, Yuri worked for about three years as an inspector of the State Traffic Inspectorate, and in the last months of the contract he served in private security, then worked as a milling machine operator at the plant. He recorded an acoustic album on a tape recorder in 1981 and partially re-recorded it in 1985. On December 5, a concert was held at the Voronezh Rock Club, at which Yuri performed several songs of his own composition. For six months, he performed solo under the name "Sektor gaza", obtained thanks to the nickname of the part of the Left Bank region of Voronezh, known for the tense environmental situation and the criminal situation. The first electrical composition of the team was formed only in June 1988 and subsequently changed frequently. The group of Yuri Klinskikh received universal fame in 1990 after the release of the albums "Zloveshchii mertvetsy" and "Yadryona Vosh." The success of a simple Voronezh guy was made possible thanks to Gorbachev's perestroika, hungry for forbidden topics. There was no censorship for him; he sang about everything and everything. Due to the abundance of profanity in the lyrics, the Gaza Strip remained in the underground for a long time. Until 1991, the group did not give concerts outside Voronezh (with the exception of the only performance in Cherepovets in 1989). Records of the "Sektor Gaza" were distributed throughout the country by fans.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raf-cN-oLu">
-                                <rect key="frame" x="0.0" y="806" width="418" height="1"/>
+                                <rect key="frame" x="0.0" y="718" width="418" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qJZ-bP-3xp"/>
@@ -325,10 +513,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="bAz-VN-Rbm">
-                        <barButtonItem key="backBarButtonItem" title="prev" id="Mrs-1o-Ijf">
+                        <barButtonItem key="backBarButtonItem" title="   " id="rQ6-BW-yn2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Dut-N0-hNF">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Dut-N0-hNF"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSA-1v-z05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -340,7 +528,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l0c-hh-akB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D2c-MO-bBW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="chevron.backward" catalog="system" backIndicatorTransitionMaskImage="chevron.backward" id="D2c-MO-bBW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,7 +552,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="images" width="64.666664123535156" height="64.666664123535156"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="skype" width="50" height="50"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

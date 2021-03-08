@@ -10,6 +10,8 @@
 		FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847AF725F15F89002C073E /* EditInfoController.swift */; };
 		FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */; };
 		FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A6B7625F2A5710004F397 /* EditProfileView.xib */; };
+		FAD569AD25F53B99007ECE85 /* ContactDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */; };
+		FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */; };
 		FADBB32025F00B2D007A6379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB31F25F00B2D007A6379 /* AppDelegate.swift */; };
 		FADBB32225F00B2D007A6379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB32125F00B2D007A6379 /* SceneDelegate.swift */; };
 		FADBB32425F00B2D007A6379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB32325F00B2D007A6379 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		FA847AF725F15F89002C073E /* EditInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoController.swift; sourceTree = "<group>"; };
 		FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		FA8A6B7625F2A5710004F397 /* EditProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileView.xib; sourceTree = "<group>"; };
+		FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDescriptionView.xib; sourceTree = "<group>"; };
+		FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDescriptionView.swift; sourceTree = "<group>"; };
 		FADBB31C25F00B2D007A6379 /* ProfileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADBB31F25F00B2D007A6379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADBB32125F00B2D007A6379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,9 +95,11 @@
 		FADBB33925F0CE17007A6379 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */,
+				FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */,
+				FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */,
 				FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */,
 				FA8A6B7625F2A5710004F397 /* EditProfileView.xib */,
+				FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */,
 				FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */,
 			);
 			path = Views;
@@ -187,6 +193,7 @@
 				FADBB32925F00B2F007A6379 /* Assets.xcassets in Resources */,
 				FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */,
 				FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */,
+				FAD569AD25F53B99007ECE85 /* ContactDescriptionView.xib in Resources */,
 				FADBB32725F00B2D007A6379 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +227,7 @@
 			files = (
 				FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */,
 				FADBB32425F00B2D007A6379 /* ViewController.swift in Sources */,
+				FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */,
 				FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */,
 				FADBB32025F00B2D007A6379 /* AppDelegate.swift in Sources */,
 				FADBB32225F00B2D007A6379 /* SceneDelegate.swift in Sources */,

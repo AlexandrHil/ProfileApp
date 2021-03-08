@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="sOr-nc-Zfh" id="Shl-HG-qsx"/>
-                <outlet property="descriptionLabel" destination="ajE-ix-yEi" id="V2v-q6-RjE"/>
+                <outlet property="descriptionTextField" destination="wXg-dH-gMO" id="4S1-tJ-lnU"/>
                 <outlet property="titleLabel" destination="rd6-Og-MMK" id="aXU-fu-YxR"/>
             </connections>
         </placeholder>
@@ -31,30 +31,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajE-ix-yEi">
-                    <rect key="frame" x="255" y="22" width="150" height="22"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-dH-gMO">
+                    <rect key="frame" x="217" y="22" width="188" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="Hdq-Y0-1IZ"/>
+                        <constraint firstAttribute="width" constant="188" id="lBf-so-Lty"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="aWD-WP-66N"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ajE-ix-yEi" firstAttribute="top" secondItem="sOr-nc-Zfh" secondAttribute="top" constant="22" id="6GB-aK-Sqe"/>
-                <constraint firstAttribute="bottom" secondItem="ajE-ix-yEi" secondAttribute="bottom" constant="8" id="Apw-GE-o6K"/>
                 <constraint firstItem="rd6-Og-MMK" firstAttribute="leading" secondItem="sOr-nc-Zfh" secondAttribute="leading" id="BsH-QH-XK3"/>
                 <constraint firstAttribute="bottom" secondItem="rd6-Og-MMK" secondAttribute="bottom" constant="8" id="OZ1-Zf-mkZ"/>
+                <constraint firstAttribute="trailing" secondItem="wXg-dH-gMO" secondAttribute="trailing" constant="16" id="RjT-9E-3jL"/>
                 <constraint firstItem="rd6-Og-MMK" firstAttribute="top" secondItem="sOr-nc-Zfh" secondAttribute="top" constant="22" id="ZCA-kd-8nU"/>
-                <constraint firstAttribute="trailing" secondItem="ajE-ix-yEi" secondAttribute="trailing" constant="16" id="fQS-f4-jkr"/>
+                <constraint firstAttribute="bottom" secondItem="wXg-dH-gMO" secondAttribute="bottom" constant="8" id="bHU-8Z-2Bw"/>
+                <constraint firstItem="wXg-dH-gMO" firstAttribute="top" secondItem="sOr-nc-Zfh" secondAttribute="top" constant="22" id="zrQ-6u-NwB"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="3.6231884057971016" y="-869.19642857142856"/>
+            <point key="canvasLocation" x="632.60869565217399" y="-893.30357142857133"/>
         </view>
     </objects>
     <resources>
