@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */; };
 		FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847AF725F15F89002C073E /* EditInfoController.swift */; };
 		FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */; };
 		FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A6B7625F2A5710004F397 /* EditProfileView.xib */; };
@@ -14,7 +15,7 @@
 		FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */; };
 		FADBB32025F00B2D007A6379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB31F25F00B2D007A6379 /* AppDelegate.swift */; };
 		FADBB32225F00B2D007A6379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB32125F00B2D007A6379 /* SceneDelegate.swift */; };
-		FADBB32425F00B2D007A6379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB32325F00B2D007A6379 /* ViewController.swift */; };
+		FADBB32425F00B2D007A6379 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB32325F00B2D007A6379 /* MainViewController.swift */; };
 		FADBB32725F00B2D007A6379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32525F00B2D007A6379 /* Main.storyboard */; };
 		FADBB32925F00B2F007A6379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32825F00B2F007A6379 /* Assets.xcassets */; };
 		FADBB32C25F00B2F007A6379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADBB32A25F00B2F007A6379 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserCardInfo.swift; sourceTree = "<group>"; };
 		FA847AF725F15F89002C073E /* EditInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoController.swift; sourceTree = "<group>"; };
 		FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		FA8A6B7625F2A5710004F397 /* EditProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileView.xib; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		FADBB31C25F00B2D007A6379 /* ProfileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADBB31F25F00B2D007A6379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADBB32125F00B2D007A6379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FADBB32325F00B2D007A6379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FADBB32325F00B2D007A6379 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FADBB32625F00B2D007A6379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FADBB32825F00B2F007A6379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADBB32B25F00B2F007A6379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		FADBB33825F0CDF3007A6379 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,7 +119,7 @@
 		FADBB33B25F0CE32007A6379 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FADBB32325F00B2D007A6379 /* ViewController.swift */,
+				FADBB32325F00B2D007A6379 /* MainViewController.swift */,
 				FA847AF725F15F89002C073E /* EditInfoController.swift */,
 			);
 			path = Controllers;
@@ -226,7 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */,
-				FADBB32425F00B2D007A6379 /* ViewController.swift in Sources */,
+				FADBB32425F00B2D007A6379 /* MainViewController.swift in Sources */,
+				FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */,
 				FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */,
 				FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */,
 				FADBB32025F00B2D007A6379 /* AppDelegate.swift in Sources */,
