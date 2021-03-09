@@ -9,7 +9,7 @@ import UIKit
 
 class EditInfoController: UIViewController {
 
-    var userCardInfo = PAUserCardInfo()
+    var userCardInfo: PAUserCardInfo?
 
     // MARK: - IBOutlets
 
@@ -40,17 +40,17 @@ class EditInfoController: UIViewController {
     // MARK: - setting view data
 
     private func setViewData() {
-        self.firstNameView.descriptionTextField.text = self.userCardInfo.firstName
-        self.aliasView.descriptionTextField.text = self.userCardInfo.alias
-        self.lastNameView.descriptionTextField.text = self.userCardInfo.lastName
-        self.ageView.descriptionTextField.text = self.userCardInfo.age
-        self.positionView.descriptionTextField.text = self.userCardInfo.position
-        self.experienceView.descriptionTextField.text = self.userCardInfo.experience
-        self.aboutTextView.text = self.userCardInfo.about
+        self.firstNameView.descriptionTextField.text = self.userCardInfo?.firstName
+        self.aliasView.descriptionTextField.text = self.userCardInfo?.alias
+        self.lastNameView.descriptionTextField.text = self.userCardInfo?.lastName
+        self.ageView.descriptionTextField.text = self.userCardInfo?.age
+        self.positionView.descriptionTextField.text = self.userCardInfo?.position
+        self.experienceView.descriptionTextField.text = self.userCardInfo?.experience
+        self.aboutTextView.text = self.userCardInfo?.about
     }
 
     private func setModelData() {
-        let userModel =  self.userCardInfo // else { return }
+        guard let userModel =  self.userCardInfo else { return }
 
         userModel.firstName = self.firstNameView.descriptionTextField.text ?? ""
         userModel.alias = aliasView.descriptionTextField.text ?? ""

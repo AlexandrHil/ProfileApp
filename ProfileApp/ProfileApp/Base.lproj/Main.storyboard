@@ -164,7 +164,7 @@
                             <barButtonItem systemItem="edit" id="r6c-3n-u6E">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="d7K-f7-RVP" kind="show" id="ZMv-SZ-4DZ"/>
+                                    <segue destination="d7K-f7-RVP" kind="show" identifier="editInfo" id="ZMv-SZ-4DZ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="3L5-Pe-fnu">

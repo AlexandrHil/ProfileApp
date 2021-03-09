@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    var userCardInfo: PAUserCardInfo?
+    var userCardInfo = PAUserCardInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +17,9 @@ class MainViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "Edit":
+        case "editInfo":
             if let controller = segue.destination as? EditInfoController {
-                controller.userCardInfo = self.userCardInfo ?? controller.userCardInfo
+                controller.userCardInfo = self.userCardInfo
             }
         default:
             break
