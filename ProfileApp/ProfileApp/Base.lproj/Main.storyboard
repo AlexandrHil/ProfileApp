@@ -369,10 +369,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-jo-Ud8">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-jo-Ud8">
                                 <rect key="frame" x="16" y="12" width="398" height="370"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-Mo-2iC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-Mo-2iC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -380,7 +380,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Yury"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-gA-Izm">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-gA-Izm">
                                         <rect key="frame" x="0.0" y="52" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -388,7 +388,7 @@
                                             <constraint firstAttribute="width" constant="398" id="sDG-fS-tKu"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="It3-1m-yig" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It3-1m-yig" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="53" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -396,14 +396,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Hoy"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-5c-UAO">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-5c-UAO">
                                         <rect key="frame" x="0.0" y="105" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Mf9-no-eTU"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-hB-5XT" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-hB-5XT" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="106" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -411,14 +411,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Klinskikh"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fde-Gu-aNc">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fde-Gu-aNc">
                                         <rect key="frame" x="0.0" y="158" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wBq-t5-7Bm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-mW-Xf0" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-mW-Xf0" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="159" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -426,14 +426,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="57"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-Tx-e34">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-Tx-e34">
                                         <rect key="frame" x="0.0" y="211" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="x7R-rZ-J2G"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-4r-nCV" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-4r-nCV" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="212" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -441,14 +441,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Singer"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-6B-Qgw">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-6B-Qgw">
                                         <rect key="frame" x="0.0" y="264" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="c46-Qd-UYM"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97S-gs-E5w" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97S-gs-E5w" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="265" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -456,14 +456,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="27 years"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Py-3Q-YYR">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Py-3Q-YYR">
                                         <rect key="frame" x="0.0" y="317" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Mxh-GE-Jdt"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F91-Db-1bt" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F91-Db-1bt" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="318" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -479,7 +479,7 @@
                                     <constraint firstItem="ccQ-gA-Izm" firstAttribute="top" secondItem="ffz-Mo-2iC" secondAttribute="bottom" id="qPk-K6-mny"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-ve-Ey4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-ve-Ey4">
                                 <rect key="frame" x="16" y="382" width="382" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -490,7 +490,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raf-cN-oLu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raf-cN-oLu">
                                 <rect key="frame" x="0.0" y="718" width="418" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -514,7 +514,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="bAz-VN-Rbm">
                         <barButtonItem key="backBarButtonItem" title="   " id="rQ6-BW-yn2"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="X7n-DT-Q8f"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="X7n-DT-Q8f"/>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutTextView" destination="wl2-ve-Ey4" id="3wT-9M-JIW"/>

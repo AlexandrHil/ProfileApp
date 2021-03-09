@@ -9,12 +9,16 @@ import UIKit
 
 class EditInfoController: UIViewController {
 
-    var userCardInfo: NPUserCardInfo?
+    var userCardInfo = PAUserCardInfo()
 
     // MARK: - IBOutlets
 
-
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem! {
+        didSet {
+            self.saveButton.target = self
+            self.saveButton.action = #selector(self.saveButtonTapped)
+        }
+    }
     @IBOutlet weak var firstNameView: EditProfileView!
     @IBOutlet weak var aliasView: EditProfileView!
     @IBOutlet weak var lastNameView: EditProfileView!
@@ -29,27 +33,24 @@ class EditInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.saveButton.addTarget(self, action: #selector(self.saveButtonTapped), for: .touchUpInside)
-
-        self.saveButton.target(
-
         self.setViewData()
+
     }
 
     // MARK: - setting view data
 
     private func setViewData() {
-        self.firstNameView.descriptionTextField.text = self.userCardInfo?.firstName
-        self.aliasView.descriptionTextField.text = self.userCardInfo?.alias
-        self.lastNameView.descriptionTextField.text = self.userCardInfo?.lastName
-        self.ageView.descriptionTextField.text = self.userCardInfo?.age
-        self.positionView.descriptionTextField.text = self.userCardInfo?.position
-        self.experienceView.descriptionTextField.text = self.userCardInfo?.experience
-        self.aboutTextView.text = self.userCardInfo?.about
+        self.firstNameView.descriptionTextField.text = self.userCardInfo.firstName
+        self.aliasView.descriptionTextField.text = self.userCardInfo.alias
+        self.lastNameView.descriptionTextField.text = self.userCardInfo.lastName
+        self.ageView.descriptionTextField.text = self.userCardInfo.age
+        self.positionView.descriptionTextField.text = self.userCardInfo.position
+        self.experienceView.descriptionTextField.text = self.userCardInfo.experience
+        self.aboutTextView.text = self.userCardInfo.about
     }
 
     private func setModelData() {
-        guard let userModel =  self.userCardInfo else { return }
+        let userModel =  self.userCardInfo // else { return }
 
         userModel.firstName = self.firstNameView.descriptionTextField.text ?? ""
         userModel.alias = aliasView.descriptionTextField.text ?? ""
@@ -61,6 +62,12 @@ class EditInfoController: UIViewController {
     }
 
     // MARK: - actions
+
+//    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+//
+//        self.setModelData()
+//        self.navigationController?.popViewController(animated: true)
+//    }
 
     @objc func saveButtonTapped() {
         self.setModelData()

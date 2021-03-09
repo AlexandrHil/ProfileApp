@@ -7,8 +7,8 @@
 
 import Foundation
 
-class NPUserCardInfo {
-    var firstName: String = "Yury"
+class PAUserCardInfo {
+    var firstName: String = "Yury Model"
     var alias: String = "Hoy"
     var lastName: String = "Klinskikh"
     var age: String = "57"
