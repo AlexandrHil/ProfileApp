@@ -63,12 +63,6 @@ class EditInfoController: UIViewController {
 
     // MARK: - actions
 
-//    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-//
-//        self.setModelData()
-//        self.navigationController?.popViewController(animated: true)
-//    }
-
     @objc func saveButtonTapped() {
         self.setModelData()
         self.navigationController?.popViewController(animated: true)

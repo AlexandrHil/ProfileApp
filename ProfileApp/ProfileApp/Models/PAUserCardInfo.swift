@@ -8,10 +8,12 @@
 import Foundation
 
 class PAUserCardInfo {
-    var firstName: String = "Yury Model"
-    var alias: String = "Hoy"
+    var firstName: String = "Yury"
+    var alias: String = """
+"Hoy"
+"""
     var lastName: String = "Klinskikh"
-    var age: String = "57"
+    var age: String = "57 years"
     var position: String = "Singer"
     var experience: String = "27"
     var about: String = """
