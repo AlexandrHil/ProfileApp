@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol EditInfoControllerDelegate: class {
+    func ageChanged(picker: UIDatePicker, age: Date)
+}
+
 class EditInfoController: UIViewController {
+
+//    weak var delegate: EditInfoControllerDelegate?
 
     var userCardInfo: PAUserCardInfo?
 
@@ -22,11 +28,41 @@ class EditInfoController: UIViewController {
     @IBOutlet weak var firstNameView: EditProfileView!
     @IBOutlet weak var aliasView: EditProfileView!
     @IBOutlet weak var lastNameView: EditProfileView!
-    @IBOutlet weak var ageView: EditProfileView!
+    @IBOutlet weak var ageView: EditProfileView! {
+        didSet {
+            self.ageView.descriptionTextField.inputView = self.ageDatePicker
+        }
+    }
     @IBOutlet weak var positionView: EditProfileView!
-    @IBOutlet weak var experienceView: EditProfileView!
+    @IBOutlet weak var experienceView: EditProfileView! {
+        didSet {
+            self.experienceView.descriptionTextField.inputView = self.experienceDatePicker
+        }
+    }
     @IBOutlet weak var aboutView: EditProfileView!
     @IBOutlet weak var aboutTextView: UITextView!
+
+    private lazy var ageDatePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .date
+        picker.preferredDatePickerStyle = .wheels
+        picker.maximumDate = Date()
+        picker.addTarget(self, action: #selector(ageDatePickerValueChanged),
+                         for: .valueChanged)
+
+        return picker
+    }()
+
+    private lazy var experienceDatePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .date
+        picker.preferredDatePickerStyle = .wheels
+        picker.maximumDate = Date()
+        picker.addTarget(self, action: #selector(experienceDatePickerValueChanged),
+                         for: .valueChanged)
+
+        return picker
+    }()
 
     // MARK: - view life cycle
 
@@ -66,5 +102,13 @@ class EditInfoController: UIViewController {
     @objc func saveButtonTapped() {
         self.setModelData()
         self.navigationController?.popViewController(animated: true)
+    }
+
+    @objc private func ageDatePickerValueChanged(_ ageDatePicker: UIDatePicker) {
+        self.ageView.descriptionTextField.text = "\(ageDatePicker.date.ageInYears) years"
+    }
+
+    @objc private func experienceDatePickerValueChanged(_ experienceDatePicker: UIDatePicker) {
+        self.experienceView.descriptionTextField.text = "\(experienceDatePicker.date.ageInYears)"
     }
 }

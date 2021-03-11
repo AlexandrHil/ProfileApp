@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
             self.avatarImageView.layer.cornerRadius = self.avatarImageView.bounds.height / 2
         }
     }
-    
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var positionLabel: TitleDescriptionView!
@@ -53,12 +53,19 @@ class MainViewController: UIViewController {
             if let controller = segue.destination as? EditInfoController {
                 controller.userCardInfo = self.userCardInfo
             }
-        case "showContact":
-            if let controller = segue.destination as? ShowContactViewController {
-                controller.delegate = self
-            }
         default:
             break
         }
     }
+
+    // MARK: - actions
+
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        let text = "Hello"
+                guard let url = URL(string: "google.com") else { return }
+                let activityController = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
+                self.present(activityController,
+                             animated: true)
+    }
+
 }

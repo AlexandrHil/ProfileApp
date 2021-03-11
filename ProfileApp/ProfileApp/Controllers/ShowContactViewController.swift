@@ -9,7 +9,7 @@ import UIKit
 
 class ShowContactViewController: UIViewController {
 
-    weak var delegate: ShowContactViewControllerDelegate?
+//    weak var delegate: ShowContactViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
