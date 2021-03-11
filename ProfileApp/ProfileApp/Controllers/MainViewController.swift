@@ -67,5 +67,4 @@ class MainViewController: UIViewController {
                 self.present(activityController,
                              animated: true)
     }
-
 }

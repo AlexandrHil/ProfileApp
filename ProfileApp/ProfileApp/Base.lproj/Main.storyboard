@@ -163,6 +163,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bbN-AY-rXu">
+                        <barButtonItem key="backBarButtonItem" title=" " id="iYF-FX-ol5"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="edit" id="r6c-3n-u6E">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,7 +278,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="i35-cv-eUu">
-                        <barButtonItem key="backBarButtonItem" title="    " id="EfK-Yq-U7Y"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="EfK-Yq-U7Y"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="RiS-MH-MMO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -528,7 +529,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="bAz-VN-Rbm">
-                        <barButtonItem key="backBarButtonItem" title="   " id="rQ6-BW-yn2"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="rQ6-BW-yn2"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="X7n-DT-Q8f"/>
                     </navigationItem>
                     <connections>
