@@ -70,7 +70,6 @@ class EditInfoController: UIViewController {
         super.viewDidLoad()
 
         self.setViewData()
-
     }
 
     // MARK: - setting view data

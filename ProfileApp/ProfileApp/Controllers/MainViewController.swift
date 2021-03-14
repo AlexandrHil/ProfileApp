@@ -35,7 +35,14 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setViewData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.setViewData()
     }
 
     // MARK: - setting view data
@@ -44,6 +51,7 @@ class MainViewController: UIViewController {
         self.nameLabel.text = self.userCardInfo.firstName + " " + self.userCardInfo.alias + " " + self.userCardInfo.lastName
         self.ageLabel.text = self.userCardInfo.age
         self.positionLabel.descriptionText = self.userCardInfo.position
+        self.experienceLabel.descriptionText = self.userCardInfo.experience
         self.aboutTextView.text = self.userCardInfo.about
     }
 
