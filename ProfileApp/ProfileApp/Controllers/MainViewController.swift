@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setViewData()
     }
 
@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
     private func setViewData() {
         self.nameLabel.text = self.userCardInfo.firstName + " " + self.userCardInfo.alias + " " + self.userCardInfo.lastName
         self.ageLabel.text = self.userCardInfo.age
-        self.positionLabel.descriptionText = self.userCardInfo.position
+        self.positionLabel.descriptionText = self.userCardInfo.position.rawValue
         self.experienceLabel.descriptionText = self.userCardInfo.experience
         self.aboutTextView.text = self.userCardInfo.about
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */; };
+		FA8433D825FEA4B800B9698F /* PAPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8433D725FEA4B800B9698F /* PAPosition.swift */; };
 		FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847AF725F15F89002C073E /* EditInfoController.swift */; };
 		FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */; };
 		FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A6B7625F2A5710004F397 /* EditProfileView.xib */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserCardInfo.swift; sourceTree = "<group>"; };
+		FA8433D725FEA4B800B9698F /* PAPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAPosition.swift; sourceTree = "<group>"; };
 		FA847AF725F15F89002C073E /* EditInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoController.swift; sourceTree = "<group>"; };
 		FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		FA8A6B7625F2A5710004F397 /* EditProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileView.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */,
+				FA8433D725FEA4B800B9698F /* PAPosition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB5BABF25F960E400B24F4D /* Date+Ex.swift in Sources */,
+				FA8433D825FEA4B800B9698F /* PAPosition.swift in Sources */,
 				FAB5BABC25F81F7F00B24F4D /* ShowContactViewController.swift in Sources */,
 				FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */,
 				FADBB32425F00B2D007A6379 /* MainViewController.swift in Sources */,

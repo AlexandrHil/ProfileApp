@@ -11,7 +11,7 @@ protocol EditInfoControllerDelegate: class {
     func ageChanged(picker: UIDatePicker, age: Date)
 }
 
-class EditInfoController: UIViewController {
+class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
 //    weak var delegate: EditInfoControllerDelegate?
 
@@ -33,7 +33,11 @@ class EditInfoController: UIViewController {
             self.ageView.descriptionTextField.inputView = self.ageDatePicker
         }
     }
-    @IBOutlet weak var positionView: EditProfileView!
+    @IBOutlet weak var positionView: EditProfileView! {
+        didSet {
+            self.positionView.descriptionTextField.inputView = self.positionDatePicker
+        }
+    }
     @IBOutlet weak var experienceView: EditProfileView! {
         didSet {
             self.experienceView.descriptionTextField.inputView = self.experienceDatePicker
@@ -50,6 +54,14 @@ class EditInfoController: UIViewController {
         picker.addTarget(self, action: #selector(ageDatePickerValueChanged),
                          for: .valueChanged)
 
+        return picker
+    }()
+
+    private lazy var positionDatePicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        picker.translatesAutoresizingMaskIntoConstraints = false
         return picker
     }()
 
@@ -79,7 +91,7 @@ class EditInfoController: UIViewController {
         self.aliasView.descriptionTextField.text = self.userCardInfo?.alias
         self.lastNameView.descriptionTextField.text = self.userCardInfo?.lastName
         self.ageView.descriptionTextField.text = self.userCardInfo?.age
-        self.positionView.descriptionTextField.text = self.userCardInfo?.position
+        self.positionView.descriptionTextField.text = self.userCardInfo?.position.rawValue
         self.experienceView.descriptionTextField.text = self.userCardInfo?.experience
         self.aboutTextView.text = self.userCardInfo?.about
     }
@@ -91,7 +103,7 @@ class EditInfoController: UIViewController {
         userModel.alias = aliasView.descriptionTextField.text ?? ""
         userModel.lastName = lastNameView.descriptionTextField.text ?? ""
         userModel.age = ageView.descriptionTextField.text ?? ""
-        userModel.position = positionView.descriptionTextField.text ?? ""
+        userModel.position = PAPosition(rawValue: self.positionView.descriptionTextField.text ?? "") ?? .singer
         userModel.experience = experienceView.descriptionTextField.text ?? ""
         userModel.about = self.aboutTextView.text ?? ""
     }
@@ -109,5 +121,21 @@ class EditInfoController: UIViewController {
 
     @objc private func experienceDatePickerValueChanged(_ experienceDatePicker: UIDatePicker) {
         self.experienceView.descriptionTextField.text = "\(experienceDatePicker.date.ageInYears)"
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PAPosition.allCases.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return PAPosition.stringPosition[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.positionView.descriptionTextField.text = PAPosition.stringPosition[row]
     }
 }
