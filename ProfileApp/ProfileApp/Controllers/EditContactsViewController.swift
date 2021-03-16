@@ -7,16 +7,22 @@
 
 import UIKit
 
-class EditContactsViewController: UIViewController {
+protocol EditContactsViewControllerDelegate: class {
+    func phoneDidChanged(phone: String)
+    func emailDidChanged(email: String)
+    func skypeDidChanged(skype: String)
+}
 
-    var userContactInfo: PAUserContactInfo?
+class EditContactsViewController: UIViewController, UITextFieldDelegate {
+
+    weak var delegate: EditContactsViewControllerDelegate?
 
     // MARK: - IBOutlets
 
     @IBOutlet weak var saveButton: UIBarButtonItem! {
         didSet {
             self.saveButton.target = self
-            self.saveButton.action = #selector(self.saveButtonTapped)
+//            self.saveButton.action = #selector(self.saveButtonTapped)
         }
     }
     @IBOutlet weak var phoneView: EditContactsView! {
@@ -36,38 +42,37 @@ class EditContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tapgest = UITapGestureRecognizer(target: self, action: #selector(taptoend))
-        self.view.addGestureRecognizer(tapgest)
+        self.phoneView.descriptionTextField.delegate = self
+        self.emailView.descriptionTextField.delegate = self
+        self.skypeView.descriptionTextField.delegate = self
 
-        self.view.endEditing(true)
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                              action: #selector(viewDidTapped)))
 
-        self.setViewData()
-    }
-
-    // MARK: - setting view data
-
-    private func setViewData() {
-        self.phoneView.descriptionTextField.text = self.userContactInfo?.phoneInfo
-        self.emailView.descriptionTextField.text = self.userContactInfo?.emailInfo
-        self.skypeView.descriptionTextField.text = self.userContactInfo?.skypeInfo
-    }
-
-    private func setModelData() {
-        guard let userContact =  self.userContactInfo else { return }
-
-        userContact.phoneInfo = self.phoneView.descriptionTextField.text ?? ""
-        userContact.emailInfo = emailView.descriptionTextField.text ?? ""
-        userContact.skypeInfo = skypeView.descriptionTextField.text ?? ""
     }
 
     // MARK: - actions
 
-    @objc func saveButtonTapped() {
-        self.setModelData()
-        self.navigationController?.popViewController(animated: true)
-    }
+    private func textFieldDidEndEditing(_ textField: EditContactsView) {
+        if textField == self.phoneView.descriptionTextField {
+            self.delegate?.phoneDidChanged(phone: phoneView.descriptionTextField.text ?? "")
+        }
 
-    @objc func taptoend() {
+
+//        if textField == self.emailView.descriptionTextField {
+//            self.delegate?.emailDidChanged(email: emailView.descriptionTextField.text ?? "")
+//        }
+//        if textField == self.skypeView.descriptionTextField {
+//            self.delegate?.skypeDidChanged(skype: skypeView.descriptionTextField.text ?? "")
+//        }
+   }
+
+//    @objc func saveButtonTapped() {
+//
+//            self.dismiss(animated: true)
+//    }
+
+    @objc private func viewDidTapped() {
         self.view.endEditing(true)
     }
 }

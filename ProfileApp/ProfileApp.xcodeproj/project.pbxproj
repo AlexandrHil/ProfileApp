@@ -26,7 +26,6 @@
 		FADBB34F25F0FC96007A6379 /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */; };
 		FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */; };
 		FADD164F26011A080009523E /* EditContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD164E26011A080009523E /* EditContactsViewController.swift */; };
-		FADD165526011F5C0009523E /* PAUserContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD165426011F5C0009523E /* PAUserContactInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
 		FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDescriptionView.xib; sourceTree = "<group>"; };
 		FADD164E26011A080009523E /* EditContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactsViewController.swift; sourceTree = "<group>"; };
-		FADD165426011F5C0009523E /* PAUserContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserContactInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */,
-				FADD165426011F5C0009523E /* PAUserContactInfo.swift */,
 				FA8433D725FEA4B800B9698F /* PAUserPosition.swift */,
 			);
 			path = Models;
@@ -246,7 +243,6 @@
 				FAB5BABF25F960E400B24F4D /* Date+Ex.swift in Sources */,
 				FA8433D825FEA4B800B9698F /* PAUserPosition.swift in Sources */,
 				FAB5BABC25F81F7F00B24F4D /* ShowContactsViewController.swift in Sources */,
-				FADD165526011F5C0009523E /* PAUserContactInfo.swift in Sources */,
 				FA8A6B7025F2A50F0004F397 /* EditContactsView.swift in Sources */,
 				FADBB32425F00B2D007A6379 /* MainViewController.swift in Sources */,
 				FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */,

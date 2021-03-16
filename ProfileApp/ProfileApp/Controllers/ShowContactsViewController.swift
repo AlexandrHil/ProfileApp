@@ -7,9 +7,13 @@
 
 import UIKit
 
-class ShowContactsViewController: UIViewController {
+class ShowContactsViewController: UIViewController, EditContactsViewControllerDelegate {
+    func phoneDidChanged(phone: String) {
+    }
 
-    var userContactInfo = PAUserContactInfo()
+    func skypeDidChanged(skype: String) {
+    }
+
 
     // MARK: - IBOutlets
 
@@ -22,31 +26,32 @@ class ShowContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setViewData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.setViewData()
     }
 
     // MARK: - setting view data
 
-    private func setViewData() {
-        self.phoneLabel.descriptionLabelText = self.userContactInfo.phoneInfo
-        self.emailLabel.descriptionLabelText = self.userContactInfo.emailInfo
-        self.skypeLabel.descriptionLabelText = self.userContactInfo.skypeInfo
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "editContact":
+        case "showContact":
             if let controller = segue.destination as? EditContactsViewController {
-                controller.userContactInfo = self.userContactInfo
+                controller.delegate = self
             }
         default:
             break
         }
+    }
+
+    @IBAction func unwindToCard(_ unwindSegue: UIStoryboardSegue) {
+        print(unwindSegue.source)
+        print(unwindSegue.description)
+    }
+
+    func emailDidChanged(email: String) {
+        self.userCardInfo.email = email
     }
 }
