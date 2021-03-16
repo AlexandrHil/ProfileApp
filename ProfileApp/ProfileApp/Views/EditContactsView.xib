@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="sOr-nc-Zfh" id="Shl-HG-qsx"/>
                 <outlet property="descriptionTextField" destination="wXg-dH-gMO" id="4S1-tJ-lnU"/>
@@ -31,13 +31,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-dH-gMO">
-                    <rect key="frame" x="217" y="22" width="188" height="22"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="description" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-dH-gMO">
+                    <rect key="frame" x="155" y="22" width="250" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="188" id="lBf-so-Lty"/>
+                        <constraint firstAttribute="width" constant="250" id="lBf-so-Lty"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="endTyping:" destination="-1" eventType="primaryActionTriggered" id="qQJ-Mw-FLH"/>
+                    </connections>
                 </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="aWD-WP-66N"/>

@@ -90,7 +90,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF2-7U-ze1">
                                 <rect key="frame" x="20" y="296" width="374" height="402"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="juc-I6-yEm">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="juc-I6-yEm">
                                         <rect key="frame" x="-6" y="0.0" width="386" height="408"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -196,7 +196,7 @@
         <!--Contacts-->
         <scene sceneID="oVI-4P-5w2">
             <objects>
-                <viewController id="NZa-pQ-FOr" sceneMemberID="viewController">
+                <viewController id="NZa-pQ-FOr" customClass="ShowContactsViewController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="90j-fW-QaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,10 +282,15 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="RiS-MH-MMO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="mKs-vs-eOy" kind="show" id="N0d-aP-PIR"/>
+                                <segue destination="mKs-vs-eOy" kind="show" identifier="editContact" id="N0d-aP-PIR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="GSb-bb-duc" id="oMV-4o-3q6"/>
+                        <outlet property="phoneLabel" destination="W04-xy-7ny" id="K0L-j0-PhM"/>
+                        <outlet property="skypeLabel" destination="Mkv-Y3-UBm" id="fuW-AH-kzC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLS-eW-6te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +299,7 @@
         <!--Edit-->
         <scene sceneID="Mhs-B2-AM3">
             <objects>
-                <viewController id="mKs-vs-eOy" sceneMemberID="viewController">
+                <viewController id="mKs-vs-eOy" customClass="EditContactsViewController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAF-kk-3xD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,19 +311,20 @@
                                     <constraint firstAttribute="height" constant="1" id="LaJ-9b-B0J"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-mm-AW3">
-                                <rect key="frame" x="16" y="117" width="398" height="1"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="vEs-RM-ATl"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-yV-XRn" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-yV-XRn" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                 <rect key="frame" x="16" y="12" width="398" height="52"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Phone"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="+375297778899"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-hU-sde" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="65" width="398" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="sektorgaza@gmail.com"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-RT-dYS">
@@ -328,15 +334,14 @@
                                     <constraint firstAttribute="height" constant="1" id="kx5-W7-oAH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-hU-sde" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="65" width="398" height="52"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Email"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="sektorgaza@gmail.com"/>
-                                </userDefinedRuntimeAttributes>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-mm-AW3">
+                                <rect key="frame" x="16" y="117" width="398" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="vEs-RM-ATl"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-DK-HIC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-DK-HIC" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                 <rect key="frame" x="16" y="118" width="398" height="52"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -372,6 +377,12 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Hp5-Cw-2QX"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="L7U-2C-myB"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailView" destination="TtG-hU-sde" id="IZA-lo-Ygp"/>
+                        <outlet property="phoneView" destination="Xth-yV-XRn" id="8iA-Qz-gZr"/>
+                        <outlet property="saveButton" destination="L7U-2C-myB" id="Ayg-5E-mZd"/>
+                        <outlet property="skypeView" destination="Nq4-DK-HIC" id="xW6-WQ-aW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1c-ze-RSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,10 +396,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-jo-Ud8">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-jo-Ud8">
                                 <rect key="frame" x="16" y="12" width="398" height="370"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-Mo-2iC" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-Mo-2iC" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -396,7 +407,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Yury"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-gA-Izm">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-gA-Izm">
                                         <rect key="frame" x="0.0" y="52" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -404,7 +415,7 @@
                                             <constraint firstAttribute="width" constant="398" id="sDG-fS-tKu"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It3-1m-yig" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="It3-1m-yig" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="53" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -412,14 +423,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Hoy"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-5c-UAO">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-5c-UAO">
                                         <rect key="frame" x="0.0" y="105" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Mf9-no-eTU"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-hB-5XT" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-hB-5XT" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="106" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -427,14 +438,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Klinskikh"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fde-Gu-aNc">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fde-Gu-aNc">
                                         <rect key="frame" x="0.0" y="158" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wBq-t5-7Bm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-mW-Xf0" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-mW-Xf0" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="159" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -442,14 +453,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="57"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-Tx-e34">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-Tx-e34">
                                         <rect key="frame" x="0.0" y="211" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="x7R-rZ-J2G"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-4r-nCV" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-4r-nCV" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="212" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -457,14 +468,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Singer"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-6B-Qgw">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-6B-Qgw">
                                         <rect key="frame" x="0.0" y="264" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="c46-Qd-UYM"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97S-gs-E5w" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97S-gs-E5w" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="265" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -472,14 +483,14 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="27 years"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Py-3Q-YYR">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Py-3Q-YYR">
                                         <rect key="frame" x="0.0" y="317" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Mxh-GE-Jdt"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F91-Db-1bt" customClass="EditProfileView" customModule="ProfileApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F91-Db-1bt" customClass="EditContactsView" customModule="ProfileApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="318" width="398" height="52"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -495,7 +506,7 @@
                                     <constraint firstItem="ccQ-gA-Izm" firstAttribute="top" secondItem="ffz-Mo-2iC" secondAttribute="bottom" id="qPk-K6-mny"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-ve-Ey4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-ve-Ey4">
                                 <rect key="frame" x="16" y="382" width="382" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -506,7 +517,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raf-cN-oLu">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raf-cN-oLu">
                                 <rect key="frame" x="0.0" y="718" width="418" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

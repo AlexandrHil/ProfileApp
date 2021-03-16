@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class EditProfileView: UIView {
+class EditContactsView: UIView {
 
     // MARK: - IBInspectable
 
@@ -46,5 +46,11 @@ class EditProfileView: UIView {
 
     func initView() {
         self.loadFromNib()
+    }
+
+    // MARK: - actions
+
+    @IBAction func endTyping(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
 }

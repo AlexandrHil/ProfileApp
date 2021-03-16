@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */; };
-		FA8433D825FEA4B800B9698F /* PAPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8433D725FEA4B800B9698F /* PAPosition.swift */; };
+		FA8433D825FEA4B800B9698F /* PAUserPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8433D725FEA4B800B9698F /* PAUserPosition.swift */; };
 		FA847AF825F15F89002C073E /* EditInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847AF725F15F89002C073E /* EditInfoController.swift */; };
-		FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */; };
-		FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A6B7625F2A5710004F397 /* EditProfileView.xib */; };
-		FAB5BABC25F81F7F00B24F4D /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5BABB25F81F7F00B24F4D /* ShowContactViewController.swift */; };
+		FA8A6B7025F2A50F0004F397 /* EditContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A6B6F25F2A50F0004F397 /* EditContactsView.swift */; };
+		FA8A6B7725F2A5710004F397 /* EditContactsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8A6B7625F2A5710004F397 /* EditContactsView.xib */; };
+		FAB5BABC25F81F7F00B24F4D /* ShowContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5BABB25F81F7F00B24F4D /* ShowContactsViewController.swift */; };
 		FAB5BABF25F960E400B24F4D /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5BABE25F960E300B24F4D /* Date+Ex.swift */; };
 		FAD569AD25F53B99007ECE85 /* ContactDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */; };
 		FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */; };
@@ -25,15 +25,17 @@
 		FADBB34525F0F735007A6379 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB34425F0F735007A6379 /* UIView+Ex.swift */; };
 		FADBB34F25F0FC96007A6379 /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */; };
 		FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */; };
+		FADD164F26011A080009523E /* EditContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD164E26011A080009523E /* EditContactsViewController.swift */; };
+		FADD165526011F5C0009523E /* PAUserContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD165426011F5C0009523E /* PAUserContactInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserCardInfo.swift; sourceTree = "<group>"; };
-		FA8433D725FEA4B800B9698F /* PAPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAPosition.swift; sourceTree = "<group>"; };
+		FA8433D725FEA4B800B9698F /* PAUserPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserPosition.swift; sourceTree = "<group>"; };
 		FA847AF725F15F89002C073E /* EditInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoController.swift; sourceTree = "<group>"; };
-		FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
-		FA8A6B7625F2A5710004F397 /* EditProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileView.xib; sourceTree = "<group>"; };
-		FAB5BABB25F81F7F00B24F4D /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
+		FA8A6B6F25F2A50F0004F397 /* EditContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactsView.swift; sourceTree = "<group>"; };
+		FA8A6B7625F2A5710004F397 /* EditContactsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditContactsView.xib; sourceTree = "<group>"; };
+		FAB5BABB25F81F7F00B24F4D /* ShowContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactsViewController.swift; sourceTree = "<group>"; };
 		FAB5BABE25F960E300B24F4D /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDescriptionView.xib; sourceTree = "<group>"; };
 		FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDescriptionView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		FADBB34425F0F735007A6379 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
 		FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDescriptionView.xib; sourceTree = "<group>"; };
+		FADD164E26011A080009523E /* EditContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactsViewController.swift; sourceTree = "<group>"; };
+		FADD165426011F5C0009523E /* PAUserContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUserContactInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				FA5088F625F6C05E003ED9CD /* PAUserCardInfo.swift */,
-				FA8433D725FEA4B800B9698F /* PAPosition.swift */,
+				FADD165426011F5C0009523E /* PAUserContactInfo.swift */,
+				FA8433D725FEA4B800B9698F /* PAUserPosition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,8 +112,8 @@
 			children = (
 				FAD569AC25F53B99007ECE85 /* ContactDescriptionView.xib */,
 				FAD569B525F553D2007ECE85 /* ContactDescriptionView.swift */,
-				FA8A6B6F25F2A50F0004F397 /* EditProfileView.swift */,
-				FA8A6B7625F2A5710004F397 /* EditProfileView.xib */,
+				FA8A6B6F25F2A50F0004F397 /* EditContactsView.swift */,
+				FA8A6B7625F2A5710004F397 /* EditContactsView.xib */,
 				FADBB34E25F0FC96007A6379 /* TitleDescriptionView.swift */,
 				FADBB35125F0FCB7007A6379 /* TitleDescriptionView.xib */,
 			);
@@ -128,8 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				FADBB32325F00B2D007A6379 /* MainViewController.swift */,
-				FAB5BABB25F81F7F00B24F4D /* ShowContactViewController.swift */,
 				FA847AF725F15F89002C073E /* EditInfoController.swift */,
+				FADD164E26011A080009523E /* EditContactsViewController.swift */,
+				FAB5BABB25F81F7F00B24F4D /* ShowContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,7 +209,7 @@
 			files = (
 				FADBB32C25F00B2F007A6379 /* LaunchScreen.storyboard in Resources */,
 				FADBB32925F00B2F007A6379 /* Assets.xcassets in Resources */,
-				FA8A6B7725F2A5710004F397 /* EditProfileView.xib in Resources */,
+				FA8A6B7725F2A5710004F397 /* EditContactsView.xib in Resources */,
 				FADBB35225F0FCB7007A6379 /* TitleDescriptionView.xib in Resources */,
 				FAD569AD25F53B99007ECE85 /* ContactDescriptionView.xib in Resources */,
 				FADBB32725F00B2D007A6379 /* Main.storyboard in Resources */,
@@ -238,9 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB5BABF25F960E400B24F4D /* Date+Ex.swift in Sources */,
-				FA8433D825FEA4B800B9698F /* PAPosition.swift in Sources */,
-				FAB5BABC25F81F7F00B24F4D /* ShowContactViewController.swift in Sources */,
-				FA8A6B7025F2A50F0004F397 /* EditProfileView.swift in Sources */,
+				FA8433D825FEA4B800B9698F /* PAUserPosition.swift in Sources */,
+				FAB5BABC25F81F7F00B24F4D /* ShowContactsViewController.swift in Sources */,
+				FADD165526011F5C0009523E /* PAUserContactInfo.swift in Sources */,
+				FA8A6B7025F2A50F0004F397 /* EditContactsView.swift in Sources */,
 				FADBB32425F00B2D007A6379 /* MainViewController.swift in Sources */,
 				FA5088F725F6C05E003ED9CD /* PAUserCardInfo.swift in Sources */,
 				FAD569B625F553D2007ECE85 /* ContactDescriptionView.swift in Sources */,
@@ -249,6 +256,7 @@
 				FADBB32225F00B2D007A6379 /* SceneDelegate.swift in Sources */,
 				FADBB34525F0F735007A6379 /* UIView+Ex.swift in Sources */,
 				FADBB34F25F0FC96007A6379 /* TitleDescriptionView.swift in Sources */,
+				FADD164F26011A080009523E /* EditContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class PAUserCardInfo {
 """
     var lastName: String = "Klinskikh"
     var age: String = "57 years"
-    var position: PAPosition = .singer
+    var position: PAUserPosition = .singer
     var experience: String = "27"
     var about: String = """
 Soviet and Russian musician, singer, songwriter, founder and permanent leader of the "Sektor Gaza" group.

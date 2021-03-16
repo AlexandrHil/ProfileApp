@@ -13,8 +13,6 @@ protocol EditInfoControllerDelegate: class {
 
 class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-//    weak var delegate: EditInfoControllerDelegate?
-
     var userCardInfo: PAUserCardInfo?
 
     // MARK: - IBOutlets
@@ -25,25 +23,25 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             self.saveButton.action = #selector(self.saveButtonTapped)
         }
     }
-    @IBOutlet weak var firstNameView: EditProfileView!
-    @IBOutlet weak var aliasView: EditProfileView!
-    @IBOutlet weak var lastNameView: EditProfileView!
-    @IBOutlet weak var ageView: EditProfileView! {
+    @IBOutlet weak var firstNameView: EditContactsView!
+    @IBOutlet weak var aliasView: EditContactsView!
+    @IBOutlet weak var lastNameView: EditContactsView!
+    @IBOutlet weak var ageView: EditContactsView! {
         didSet {
             self.ageView.descriptionTextField.inputView = self.ageDatePicker
         }
     }
-    @IBOutlet weak var positionView: EditProfileView! {
+    @IBOutlet weak var positionView: EditContactsView! {
         didSet {
-            self.positionView.descriptionTextField.inputView = self.positionDatePicker
+            self.positionView.descriptionTextField.inputView = self.positionPicker
         }
     }
-    @IBOutlet weak var experienceView: EditProfileView! {
+    @IBOutlet weak var experienceView: EditContactsView! {
         didSet {
             self.experienceView.descriptionTextField.inputView = self.experienceDatePicker
         }
     }
-    @IBOutlet weak var aboutView: EditProfileView!
+    @IBOutlet weak var aboutView: EditContactsView!
     @IBOutlet weak var aboutTextView: UITextView!
 
     private lazy var ageDatePicker: UIDatePicker = {
@@ -57,7 +55,7 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         return picker
     }()
 
-    private lazy var positionDatePicker: UIPickerView = {
+    private lazy var positionPicker: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
@@ -81,6 +79,9 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tapgest = UITapGestureRecognizer(target: self, action: #selector(taptoend))
+        self.view.addGestureRecognizer(tapgest)
+
         self.setViewData()
     }
 
@@ -103,7 +104,7 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         userModel.alias = aliasView.descriptionTextField.text ?? ""
         userModel.lastName = lastNameView.descriptionTextField.text ?? ""
         userModel.age = ageView.descriptionTextField.text ?? ""
-        userModel.position = PAPosition(rawValue: self.positionView.descriptionTextField.text ?? "") ?? .singer
+        userModel.position = PAUserPosition(rawValue: positionView.descriptionTextField.text?.lowercased() ?? "") ?? .engineer
         userModel.experience = experienceView.descriptionTextField.text ?? ""
         userModel.about = self.aboutTextView.text ?? ""
     }
@@ -113,6 +114,10 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @objc func saveButtonTapped() {
         self.setModelData()
         self.navigationController?.popViewController(animated: true)
+    }
+
+    @objc func taptoend() {
+        self.view.endEditing(true)
     }
 
     @objc private func ageDatePickerValueChanged(_ ageDatePicker: UIDatePicker) {
@@ -128,14 +133,14 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return PAPosition.allCases.count
+        return PAUserPosition.allCases.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return PAPosition.stringPosition[row]
+        return PAUserPosition.stringPosition[row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.positionView.descriptionTextField.text = PAPosition.stringPosition[row]
+        self.positionView.descriptionTextField.text = PAUserPosition.stringPosition[row]
     }
 }

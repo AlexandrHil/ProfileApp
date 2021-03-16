@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PAPosition: String, CaseIterable {
+enum PAUserPosition: String, CaseIterable {
     case musiсian,
          writer,
          singer,
@@ -16,7 +16,7 @@ enum PAPosition: String, CaseIterable {
          engineer
 
     static var stringPosition: [String] {
-        PAPosition.allCases.map { (position) -> String in
+        PAUserPosition.allCases.map { (position) -> String in
             return position.rawValue.capitalized
         }
     }
