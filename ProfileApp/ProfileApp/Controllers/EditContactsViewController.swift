@@ -13,8 +13,17 @@ protocol EditContactsViewControllerDelegate: class {
     func skypeDidChanged(skype: String)
 }
 
-class EditContactsViewController: UIViewController, UITextFieldDelegate {
+class EditContactsViewController: UIViewController, EditContactsViewControllerDelegate, UITextFieldDelegate {
 
+    func phoneDidChanged(phone: String) {
+        print("phoneDidChanged")
+    }
+    func emailDidChanged(email: String) {
+        print("emailDidChanged")
+    }
+    func skypeDidChanged(skype: String) {
+        print("skypeDidChanged")
+    }
     weak var delegate: EditContactsViewControllerDelegate?
 
     // MARK: - IBOutlets
@@ -45,19 +54,43 @@ class EditContactsViewController: UIViewController, UITextFieldDelegate {
         self.phoneView.descriptionTextField.delegate = self
         self.emailView.descriptionTextField.delegate = self
         self.skypeView.descriptionTextField.delegate = self
-
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
-                                                              action: #selector(viewDidTapped)))
-
     }
 
     // MARK: - actions
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+    }
 
     private func textFieldDidEndEditing(_ textField: EditContactsView) {
         if textField == self.phoneView.descriptionTextField {
             self.delegate?.phoneDidChanged(phone: phoneView.descriptionTextField.text ?? "")
         }
+        if textField == self.emailView.descriptionTextField {
+            self.delegate?.emailDidChanged(email: emailView.descriptionTextField.text ?? "")
+        }
 
+        func textFieldShouldReturn (_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
+
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            if textField.textContentType == .some(.emailAddress) {
+                print("I'm e-mail")
+                return true
+            } else if textField.textContentType == .some(.telephoneNumber) {
+                let currentTextFieldText = textField.text ?? ""
+                let resultText = (currentTextFieldText as NSString).replacingCharacters(in: range, with: string)
+                if resultText.count >= 2 {
+                    return false
+                } else {
+                    return true
+                }
+            } else {
+                return true
+            }
+        }
 
 //        if textField == self.emailView.descriptionTextField {
 //            self.delegate?.emailDidChanged(email: emailView.descriptionTextField.text ?? "")

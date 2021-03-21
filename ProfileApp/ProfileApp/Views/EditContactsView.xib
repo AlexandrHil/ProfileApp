@@ -33,6 +33,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="description" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-dH-gMO">
                     <rect key="frame" x="155" y="22" width="250" height="22"/>
+                    <color key="tintColor" red="0.1442787807" green="0.28079377760000002" blue="0.1613864213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="lBf-so-Lty"/>
                     </constraints>

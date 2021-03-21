@@ -79,8 +79,10 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tapgest = UITapGestureRecognizer(target: self, action: #selector(taptoend))
+        let tapgest = UITapGestureRecognizer(target: self, action: #selector(tapToEnd))
         self.view.addGestureRecognizer(tapgest)
+
+        UITextField.appearance().tintColor = .green
 
         self.setViewData()
     }
@@ -116,7 +118,7 @@ class EditInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         self.navigationController?.popViewController(animated: true)
     }
 
-    @objc func taptoend() {
+    @objc func tapToEnd() {
         self.view.endEditing(true)
     }
 

@@ -8,12 +8,14 @@
 import UIKit
 
 class ShowContactsViewController: UIViewController, EditContactsViewControllerDelegate {
+
     func phoneDidChanged(phone: String) {
+        print("2")
     }
 
     func skypeDidChanged(skype: String) {
+        print("3")
     }
-
 
     // MARK: - IBOutlets
 
@@ -52,6 +54,6 @@ class ShowContactsViewController: UIViewController, EditContactsViewControllerDe
     }
 
     func emailDidChanged(email: String) {
-        self.userCardInfo.email = email
+        self.emailLabel.descriptionLabel.text = email
     }
 }
